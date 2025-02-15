@@ -123,46 +123,46 @@ while true; do
     case $choice in
         1) 
            echo
-           read -p "Enter target IP/hostname: " target; log_command "nmap -T4 -F $target" ;;
+           read -p "Enter target IP/hostname: " target; log_command "sudo nmap -T4 -F $target" ;;
         2) 
            echo
-           read -p "Enter target IP/hostname: " target; log_command "nmap -p- -T4 $target" ;;
+           read -p "Enter target IP/hostname: " target; log_command "sudo nmap -p- -T4 $target" ;;
         3) 
            echo
-           read -p "Enter network range (e.g., 192.168.1.0/24): " network; log_command "nmap -sn $network" ;;
+           read -p "Enter network range (e.g., 192.168.1.0/24): " network; log_command "sudo nmap -sn $network" ;;
         4) 
            echo
-           read -p "Enter target IP/hostname: " target; log_command "nmap -sV $target" ;;
+           read -p "Enter target IP/hostname: " target; log_command "sudo nmap -sV $target" ;;
         5) 
 		   echo
-           read -p "Enter target IP/hostname: " target; log_command "nmap -O $target" ;;
+           read -p "Enter target IP/hostname: " target; log_command "sudo nmap -O $target" ;;
         6) 
            echo
-           read -p "Enter target IP/hostname: " target; read -p "Enter specific port (e.g., 80,443): " port; log_command "nmap -p $port $target" ;;
+           read -p "Enter target IP/hostname: " target; read -p "Enter specific port (e.g., 80,443): " port; log_command "sudo nmap -p $port $target" ;;
         7) 
            echo
-           read -p "Enter target IP/hostname: " target; log_command "nmap -A $target" ;;
+           read -p "Enter target IP/hostname: " target; log_command "sudo nmap -A $target" ;;
         8) 
            echo
-           read -p "Enter target IP/hostname: " target; log_command "nmap -sS $target" ;;
+           read -p "Enter target IP/hostname: " target; log_command "sudo nmap -sS $target" ;;
         9) 
            echo
-           read -p "Enter target IP/hostname: " target; log_command "nmap -f $target" ;;
+           read -p "Enter target IP/hostname: " target; log_command "sudo nmap -f $target" ;;
         10) 
             echo
-            read -p "Enter target IP/hostname: " target; log_command "nmap -p- -T2 --scan-delay 100ms $target" ;;
+            read -p "Enter target IP/hostname: " target; log_command "sudo nmap -p- -T2 --scan-delay 100ms $target" ;;
         11) 
             echo
-            read -p "Enter target IP/hostname: " target; log_command "nmap -T5 --min-rate 10000 $target" ;;
+            read -p "Enter target IP/hostname: " target; log_command "sudo nmap -T5 --min-rate 10000 $target" ;;
         12) 
             echo
-            read -p "Enter target IP/hostname: " target; log_command "nmap --script vuln $target" ;;
+            read -p "Enter target IP/hostname: " target; log_command "sudo nmap --script vuln $target" ;;
         13) 
             echo
-            read -p "Enter target IP/hostname: " target; log_command "nmap --script=default $target" ;;
+            read -p "Enter target IP/hostname: " target; log_command "sudo nmap --script=default $target" ;;
         14) 
             echo
-            read -p "Enter IPv6 target: " target; log_command "nmap -6 $target" ;;
+            read -p "Enter IPv6 target: " target; log_command "sudo nmap -6 $target" ;;
         15) view_logs ;;
         16) search_logs ;;
         17) view_specific_log ;;
